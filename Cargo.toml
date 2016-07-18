@@ -1,0 +1,6 @@
+[package]
+name = "tod_wallpaper"
+version = "0.1.0"
+authors = ["Thomas <twh2898@vt.edu>"]
+
+[dependencies]
