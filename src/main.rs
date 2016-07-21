@@ -72,7 +72,6 @@ fn main() {
         let now = time::now();          // get current time
         let i = now.tm_hour / 2;        // go to next image every two hours
 
-        println!("At {:?} load image {}", now, i);
         // check if the image needs to be updated
         if i != last_img {
             last_img = i;
