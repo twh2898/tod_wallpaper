@@ -1,0 +1,13 @@
+name: Time Of Day Wallpaper
+version: "1.0"
+author: Thomas Harrison <twh2898@vt.edu>
+about: Sets the wallpaper of an Xorg desktop based on the time of day. The default directory will be /usr/share/tod_wallpaper/ and the default delay will be 24 divided by the number of images in the directory.
+args:
+    - delay:
+        short: t
+        help: Overrides the delay between images
+        takes_value: true
+    - directory:
+        short: d
+        help: Overrides the direcoty to load images from
+        takes_value: true

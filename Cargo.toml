@@ -1,7 +1,8 @@
 [package]
-name = "tod_wallpaper"
-version = "0.1.0"
 authors = ["Thomas <twh2898@vt.edu>"]
+name = "tod_wallpaper"
+version = "1.0.0"
 
 [dependencies]
+clap = {version = "2.29.0", features = ["yaml"]}
 time = "0.1"

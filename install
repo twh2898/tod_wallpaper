@@ -1,0 +1,26 @@
+#!/bin/bash
+
+##
+## install
+##
+
+ASSET_SRC="images/*"
+ASSET_DEST="/usr/share/tod_wallpaper/"
+
+BINARY_SRC="target/release/tod_wallpaper"
+BINARY_DEST="/usr/bin/tod_wallpaper"
+
+if [ ! -d $ASSET_DEST ]; then
+	echo Createing $ASSET_DEST
+	mkdir $ASSET_DEST && echo "Done!" || echo "Failed to create directory"
+fi
+
+echo Installing Assets
+cp $ASSET_SRC $ASSET_DEST && echo "Done!" || echo "Failed to copy files"
+
+echo Installing Binary
+if [ -f $BINARY_SRC ]; then
+	cp $BINARY_SRC $BINARY_DEST && echo "Binary installed to /usr/bin/tod_wallpaper" || echo "Failed to copy"
+else
+	echo "Please build before installing"
+fi
