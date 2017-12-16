@@ -2,9 +2,7 @@
 
 This program will update your wallpaper based on the time of day. Currently, every **2** hours, the wallpaper will switch to the next of **12** wallpapers in the directory `/usr/shared/tod_wallpapers/`
 
-## Usage
-
-### Install
+## Install
 
 ```
 $ git clone https://github.com/twh2898/tod_wallpaper.git
@@ -13,30 +11,26 @@ $ ./build
 $ sudo ./install
 ```
 
-### Use
+## Useage
 
+### Command Line
 ```
 $ tod_wallpaper
+```
+
+### Systemd
+```
+$ sudo systemctl enable tod_wallpaper
+$ sudo systemctl start tod_wallpaper
 ```
 
 ## Dependencies
 
 `feh` is used to set the wallpaper on an Xorg desktop
 
-## Config
-
-Loaded from
-* `~/.config/tod_wallpaper/config`
-* `~/.tod_wallpaper/config`
-* `/etc/tod_wallpaper/config`
-
-* picture directory
-* hour seperation
-
 ## Todo
 
-- [ ] Load image folder path from config file
-- [ ] Check for correct number of images
-- [ ] Load image to time mapping from config file
-- [ ] Create an install script
-- [ ] Add command line arguments (--set_img_path, --set_update_interval)
+- [x] Load image folder path from command line
+- [x] Create an install script
+- [x] Add command line arguments (-t &lt;delay&gt;, -d &lt;directory&gt;)
+- [ ] Use library instead of feh

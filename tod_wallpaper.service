@@ -1,0 +1,8 @@
+[Unit]
+Description=Time Of Day Wallpaper
+
+[Service]
+ExecStart=/usr/bin/tod_wallpaper
+
+[Install]
+WantedBy=multi-user.target

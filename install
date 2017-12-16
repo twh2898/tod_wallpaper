@@ -41,3 +41,7 @@ if [ -f $BINARY_SRC ]; then
 else
 	echo "Please build before installing"
 fi
+
+## Try copy service
+echo Installing service
+cp tod_wallpaper.service /etc/systemd/system/ && echo "Service installed to /etc/systemd/system/tod_wallpaper.service" || echo "Failed to copy service file"
