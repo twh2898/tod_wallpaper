@@ -34,3 +34,7 @@ $ sudo systemctl start tod_wallpaper
 - [x] Create an install script
 - [x] Add command line arguments (-t &lt;delay&gt;, -d &lt;directory&gt;)
 - [ ] Use library instead of feh
+
+## Credits
+
+Images taken from http://www.bitday.me/
