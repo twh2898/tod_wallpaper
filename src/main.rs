@@ -30,14 +30,14 @@ fn load<P: AsRef<Path>>(directory: P, delay: Option<i32>) -> (Vec<fs::DirEntry>,
 
     // Check if directory exists
     if !directory.exists() {
-        println!("Image directory does not exist {:?}", directory);
+        eprintln!("Image directory does not exist {:?}", directory);
         std::process::exit(-1);
     }
 
     // Load image list
     let mut images = fs::read_dir(directory)
         .unwrap_or_else(|e| {
-            println!("Failed to read image directory {:?}\n{}", directory, e);
+            eprintln!("Failed to read image directory {:?}\n{}", directory, e);
             std::process::exit(-1);
         })
         .filter_map(|f| f.ok())
@@ -45,7 +45,7 @@ fn load<P: AsRef<Path>>(directory: P, delay: Option<i32>) -> (Vec<fs::DirEntry>,
 
     // Check that there are files
     if images.len() < 1 {
-        println!("No images present in {:?}", directory);
+        eprintln!("No images present in {:?}", directory);
         std::process::exit(-1);
     }
 
